@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="196x196" href="imagenes/nysl_logo.png">
+    <title>Futbol Movil</title>
+    <!--	estilo Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- CSS FANCYBOX-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+
+    <!--	estilo principal-->
+    <link rel="stylesheet" href="style.css">
+    <!----------también bootsrap--------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!--	---------------mustache----------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js" integrity="sha256-XDU6Po3hKjdQXJHRrKrWlIF/E6y6BBgV5eiqZSYePpo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--	----------PAGINA INDEX-------------->
+
+    <div class="paginaIndex">
+        <header>
+            <img class="imagenInicio1" src="imagenes/encabezado1.png" alt="Logo de la NYSL">
+            <img class="imagenInicio2" src="imagenes/encabezado2.png" alt="Logo de la NYSL">
+        </header>
+
+        <nav class="navegadorPagIni">
+            <div class="bloqueBotPagIndex">
+                <button href="#" class="botonesPagIndex" id="botonPartidos">PARTIDOS</button>
+                <button href="#" class="botonVerChat botonesPagIndex">CHAT</button>
+            </div>
+            <button href="#" class="botonesPagIndex" id="botonEstadios">ESTADIOS</button>
+            <button data-fancybox data-src="#modal" href="javascript:;" class="botonesPagIndex">CONTACTO</button>
+            <div style="display: none;" id="modal">
+                <h2>Hola</h2>
+                <p>Si tienes alguna duda o sugerencia, no dudes en enviarnos un mail a:</p>
+                <a href="mailto:nysl@chisoccer.org">nysl@chisoccer.org</a>
+            </div>
+        </nav>
+
+        <div class="container about">
+            <h4>About NYSL</h4>
+            <h5>Mission</h5>
+            <p>To support young athletes living in Chicago's northside neighborhoods, who have an interest in learning and playing soccer, with opportunities to learn and practice skills related to the game of soccer, specifically those skills around team cooperation and good sportsmanship.</p>
+            <h5>Vision</h5>
+            <p>The Northside Youth Soccer League aspires to develop strong, well-rounded, and mindful athletes through the building of character, self-discipline, and leadership.</p>
+            <h5>General Information</h5>
+            <p>The Northside Youth Soccer League was established in 1996 to provide athletes residing in Chicago's northside neighborhoods an environment in which to learn and play soccer. To be a member of NYSL, you must be between the ages of 4 - 12 and reside in a Chicago northside neighborhood. NYSL is run by a small full-time staff, and relies on the generous volunteer time of parents and previous league members.</p>
+        </div>
+    </div>
+
+    <!--	-------PAGINA PARTIDOS----------->
+
+    <div class="paginaPartidos">
+        <header class="headerPagInt">
+            <div class="rowEncabezado">
+                <a href="#"><img src="imagenes/back_blanco.png" class="back botonHome"></a>
+                <h2 class="tituloPagInt">PARTIDOS</h2>
+                <a href="#"><img src="imagenes/home_blanco.png" class="home botonHome"></a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div id="futbolMobileID"></div>
+        </div>
+    </div>
+
+    <!--	----------------PAGINA ESTADIOS------------->
+
+    <div class="paginaEstadios">
+        <header class="headerPagInt">
+            <div class="rowEncabezado">
+                <a href="#"><img src="imagenes/back_blanco.png" class="back botonHome"></a>
+                <h2 class="tituloPagInt">ESTADIOS</h2>
+                <a href="#"><img src="imagenes/home_blanco.png" class="home botonHome"></a>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div id="estadiosID"></div>
+        </div>
+    </div>
+
+    <!--	----------------PAGINA CHAT---------------->
+
+    <div class="paginaChat">
+        <header class="headerPagInt">
+            <div class="rowEncabezado">
+                <a href="#"><img src="imagenes/back_blanco.png" class="back botonHome"></a>
+                <h2 class="tituloPagInt">CHAT</h2>
+                <a href="#"><img src="imagenes/home_blanco.png" class="home botonHome"></a>
+            </div>
+        </header>
+        
+        <div class="container">
+
+            <!--        ---------CHAT-------------->
+
+            <h4 id="introduccionLoginID">Bienvenido al chat de NYSL.<br><b>TODAVÍA NO ESTÁS LOGUEADO</b> <br>Para poder ver y escribir mensajes, por favor introduce el mail y contraseña de tu cuenta GMail</h4>
+            <button id="loginID">SIGN IN</button>
+            <img src="imagenes/gmail5.png" id="logoGmail">
+            <span id="nombreCuandoLogueasID"></span>
+            <div id="postsID" class="cuadroMensajes"></div>
+            <input id="entradaTextoChatID" type="text" placeholder="Escribe tu mensaje...">
+            <button id="createPostID">ENVIAR</button>
+        </div>
+    </div>
+
+    <!--	------------FIN DE PAGINAS------------------->
+
+    <!--		------JQUERY------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!---------------------bootstrap------------------->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <!--------------ISOTOPE------------->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <!--	-----------FANCYBOX--------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+    <!--	---------FIREBASE------------>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDGcTmZ1jYriy11gJhYUwk7_Xb_kwArr_k",
+            authDomain: "gustavomobilefubol.firebaseapp.com",
+            databaseURL: "https://gustavomobilefubol.firebaseio.com",
+            projectId: "gustavomobilefubol",
+            storageBucket: "gustavomobilefubol.appspot.com",
+            messagingSenderId: "743227189640"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
+    <!--    -----SCRIPT FUTBOL-------->
+
+    <script src="futbolMobile.js"></script>
+
+</body>
+</html>

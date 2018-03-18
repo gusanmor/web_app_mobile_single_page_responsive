@@ -1,0 +1,279 @@
+/*-----OCULTAR TODAS LAS PAGINAS MENOS INDEX------------*/
+
+.paginaPartidos {
+    display: none;
+}
+
+.paginaEstadios {
+    display: none;
+}
+
+.paginaChat {
+    display: none;
+}
+
+/*-------FIN OCULTAR PAGINAS POR DEFECTO--------*/
+
+body {
+    background-color: #bdbdbd;
+}
+
+.imagenInicio {
+    width: 100%;
+}
+
+.navegadorPagIni {
+    margin-top: 1rem;
+}
+
+.bloqueBotPagIndex {
+    /*    margin-left: 20%;*/
+}
+
+#botonPartidos {
+    margin-left: 10%;
+}
+
+#botonEstadios {
+    margin-left: 10%;
+    margin-top: 0.2rem;
+}
+
+.botonesPagIndex {
+    width: 40%;
+    height: 3rem;
+    color: #fff;
+    background-color: #033949;
+    border-color: #a3ff15;
+    border-width: 0.2rem;
+    border-radius: 0.7rem;
+    font-family: "DejaVu Sans Mono";
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.about {
+    margin-top: 2rem;
+}
+
+.rowEncabezado {
+    /*    height: 3rem;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    height: 2.5rem;
+    /*    float: left;*/
+}
+
+.tituloPagInt {
+    margin-top: 0.2rem;
+}
+
+.home {
+
+    height: 2.4rem;
+}
+
+.headerPagInt {
+    background-color: #033949;
+    border-bottom: solid #a3ff15;
+    color: #fff;
+    font-family: "DejaVu Sans Mono";
+}
+
+.escudosEquipos {
+    height: 5rem;
+}
+
+.fechaPartido {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nombreEquipo {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+botonVerUbicacion {
+    /*    font-size-adjust: auto;*/
+}
+
+.centrarEscudo {
+    display: flex;
+    justify-content: center;
+}
+
+.guion {
+    /*    width: 100%;*/
+    font-size: 2rem;
+    text-align: center;
+    /*    margin-top: 2rem;*/
+}
+
+.imagenInicio1 {
+    width: 100%;
+}
+
+.imagenInicio2 {
+    width: 100%;
+}
+
+.mapaIframe {
+    width: 100%;
+}
+
+.mapaIframe2 {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.estadio2 {
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.textoEnEstadios {
+/*    margin-left: 10%;*/
+    width: 15rem;
+}
+
+.centrarEscudoEstadios {
+    margin-top: 0.6rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.escudosEnEstadios {
+
+    height: 5rem;
+}
+
+.cuadroMensajes {
+    background-color: #033949;
+    border-radius: 0.7rem;
+    font-family: "DejaVu Sans Mono";
+/*    height: 8rem;*/
+    overflow: auto;
+}
+
+#entradaTextoChatID {
+    margin-top: 1rem;
+    background-color: white;
+    width: 60%;
+}
+
+#createPostID {
+    width: 35%;
+    color: #fff;
+    background-color: #033949;
+    border-color: #a3ff15;
+    border-width: 0.2rem;
+    border-radius: 0.7rem;
+    font-family: "DejaVu Sans Mono";
+}
+
+#loginID {
+    margin-left: 32%;
+    width: 35%;
+    color: #fff;
+    background-color: #033949;
+    border-color: #a3ff15;
+    border-width: 0.2rem;
+    border-radius: 0.7rem;
+    font-family: "DejaVu Sans Mono";
+    margin-top: 1rem;
+}
+
+.cajaCadaMensaje {
+    width: 90%;
+    background-color: white;
+    border-radius: 0.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 5%;
+}
+
+.fotoUsuario {
+    width: 3rem;
+    border-radius: 0.7rem;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.linea1Chat {
+    font-family: arial;
+    font-style: italic;
+    text-align: center;
+}
+
+.linea2Chat {
+    font-family: arial;
+    margin-left: 1rem;
+}
+
+#logoGmail {
+    margin-left: 40%;
+    width: 20%;
+    display: block;
+}
+
+#nombreCuandoLogueasID {
+    background-color: #033949;
+    color: #fff;
+    padding: 0.3rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    border-radius: 0.7rem;
+
+}
+
+#introduccionLoginID {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #033949;
+    border-color: #a3ff15;
+    border-width: 0.2rem;
+    border-radius: 0.7rem;
+    font-family: "DejaVu Sans Mono";
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+#modal {
+    text-align: center;
+    border-radius: 0.7rem;
+}
+
+@media (orientation: portrait) {
+    .mapaIframe {
+        display: none;
+    }
+    .imagenInicio2 {
+        display: none;
+    }
+    .cuadroMensajes {
+        height: 21rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .botonUbicacion {
+        display: none;
+    }
+    .imagenInicio1 {
+        display: none;
+    }
+    .cuadroMensajes {
+        height: 7rem;
+    }
+}
