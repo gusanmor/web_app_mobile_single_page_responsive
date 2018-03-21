@@ -5,7 +5,7 @@ $.getJSON("https://api.myjson.com/bins/17bivx", function (data) {
     crearFutbolMobile(data);
 });
 
-//-------------CHAT-------------
+//-------------CHAT--------------
 
 //-------MOSTRAR Y OCULTAR ANTES DEL LOGIN-------
 
