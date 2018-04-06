@@ -176,21 +176,8 @@ function crearFutbolMobile(data) {
             '</div>';
     }
 
-    //------FUNCION PARA ORDENAR LOS ESTADIOS------
-    var varEstadios = "estadio";
 
-    function ordenarEstadios(data) {
-        return data.equipo.sort(function (a, b) {
-            if (a[varEstadios] > b[varEstadios]) {
-                return 1;
-            }
-            if (a[varEstadios] < b[varEstadios]) {
-                return -1;
-            }
-            // a must be equal to b
-            return 0;
-        });
-    }
+
 
     var dataOrdenadoEstadios = ordenarEstadios(data);
 
@@ -207,4 +194,23 @@ function crearFutbolMobile(data) {
 
     document.getElementById("futbolMobileID").innerHTML = contenidoFutbolMobile;
     document.getElementById("estadiosID").innerHTML = contenidoEstadios;
+}
+
+// function crearContEstad(data){
+//
+// }
+
+//------FUNCION PARA ORDENAR LOS ESTADIOS------
+function ordenarEstadios(data) {
+    // var varEstadios = "estadio";
+    return data.equipo.sort(function (a, b) {
+        if (a.estadio > b.estadio) {
+            return 1;
+        }
+        if (a.estadio < b.estadio) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
 }
