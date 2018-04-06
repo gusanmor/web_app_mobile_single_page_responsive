@@ -3,6 +3,7 @@
 $.getJSON("https://api.myjson.com/bins/17bivx", function (data) {
     console.log(data);
     crearFutbolMobile(data);
+    crearContEstad(data);
 });
 
 //-------------CHAT--------------
@@ -140,9 +141,9 @@ $(".botonVerChat").click(function () {
     $(".paginaChat").show();
 });
 
+// ------CREAR DATOS PARTIDOS---------
 function crearFutbolMobile(data) {
     var contenidoFutbolMobile = "";
-    var contenidoEstadios = "";
     var NumEquipoLocal;
     var NumEquipoVisitante;
 
@@ -175,14 +176,16 @@ function crearFutbolMobile(data) {
             '</div>' +
             '</div>';
     }
+    document.getElementById("futbolMobileID").innerHTML = contenidoFutbolMobile;
+}
 
+// ----CREAR DATOS ESTADIOS-----
+function crearContEstad(data){
 
-
-
+    var contenidoEstadios = "";
     var dataOrdenadoEstadios = ordenarEstadios(data);
 
     for (var i = 0; i < dataOrdenadoEstadios.length; i++) {
-
         contenidoEstadios +=
             '<div class="estadio2">' +
             '<a class="btn btn-primary textoEnEstadios" data-fancybox href="' + dataOrdenadoEstadios[i].mapaEstadio + '">' + dataOrdenadoEstadios[i].estadio + ',<br>VER MAPA</a>' +
@@ -192,17 +195,12 @@ function crearFutbolMobile(data) {
             '</div>';
     }
 
-    document.getElementById("futbolMobileID").innerHTML = contenidoFutbolMobile;
     document.getElementById("estadiosID").innerHTML = contenidoEstadios;
-}
 
-// function crearContEstad(data){
-//
-// }
+}
 
 //------FUNCION PARA ORDENAR LOS ESTADIOS------
 function ordenarEstadios(data) {
-    // var varEstadios = "estadio";
     return data.equipo.sort(function (a, b) {
         if (a.estadio > b.estadio) {
             return 1;
