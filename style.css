@@ -64,7 +64,6 @@ body {
 
 .back {
     height: 2.5rem;
-    /*    float: left;*/
 }
 
 .tituloPagInt {
@@ -72,7 +71,6 @@ body {
 }
 
 .home {
-
     height: 2.4rem;
 }
 
@@ -107,10 +105,8 @@ botonVerUbicacion {
 }
 
 .guion {
-    /*    width: 100%;*/
     font-size: 2rem;
     text-align: center;
-    /*    margin-top: 2rem;*/
 }
 
 .imagenInicio1 {
@@ -138,7 +134,6 @@ botonVerUbicacion {
 }
 
 .textoEnEstadios {
-/*    margin-left: 10%;*/
     width: 15rem;
 }
 
@@ -149,7 +144,6 @@ botonVerUbicacion {
     justify-content: center;
 }
 .escudosEnEstadios {
-
     height: 5rem;
 }
 
@@ -157,7 +151,6 @@ botonVerUbicacion {
     background-color: #033949;
     border-radius: 0.7rem;
     font-family: "DejaVu Sans Mono";
-/*    height: 8rem;*/
     overflow: auto;
 }
 
@@ -230,7 +223,6 @@ botonVerUbicacion {
     padding-right: 2rem;
     padding-left: 1rem;
     border-radius: 0.7rem;
-
 }
 
 #introduccionLoginID {

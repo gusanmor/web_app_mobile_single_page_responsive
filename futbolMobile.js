@@ -74,8 +74,6 @@ function writeNewPostF() {
     console.log("updates", updates);
     firebase.database().ref().child('chatGeneralFutbol').update(updates);
 
-    //    console.log("Write!!!");
-    //$("#entradaTextoChatID").val("");
     document.getElementById("entradaTextoChatID").value = "";
 }
 
@@ -85,11 +83,8 @@ function getPostsF() {
 
         var logs = document.getElementById('postsID');
         logs.innerHTML = "";
-
         var posts = data.val();
-
         var contenidoPost = "";
-        //        console.log(element);
         for (var key in posts) {
             var element = posts[key];
             contenidoPost += '<div class="cajaCadaMensaje">' +
@@ -196,7 +191,6 @@ function crearContEstad(data){
     }
 
     document.getElementById("estadiosID").innerHTML = contenidoEstadios;
-
 }
 
 //------FUNCION PARA ORDENAR LOS ESTADIOS------
@@ -208,7 +202,6 @@ function ordenarEstadios(data) {
         if (a.estadio < b.estadio) {
             return -1;
         }
-        // a must be equal to b
         return 0;
     });
 }
